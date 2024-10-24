@@ -9,6 +9,7 @@ import {
   useNotificationProvider,
 } from "@refinedev/antd";
 import "@refinedev/antd/dist/reset.css";
+import "./index.css"
 
 import routerBindings, {
   DocumentTitleHandler,

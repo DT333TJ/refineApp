@@ -51,7 +51,8 @@ export const Header: React.FC<RefineThemedLayoutV2HeaderProps> = ({
           onChange={() => setMode(mode === "light" ? "dark" : "light")}
           defaultChecked={mode === "dark"}
         />
-        <Space style={{ marginLeft: "8px" }} size="middle">
+        <span className="ml-2 bg-red-600">测试</span>
+        <Space className="ml-2" size="middle">
           {user?.name && <Text strong>{user.name}</Text>}
           {user?.avatar && <Avatar src={user?.avatar} alt={user?.name} />}
         </Space>
