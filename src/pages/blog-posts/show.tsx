@@ -18,6 +18,8 @@ export const BlogPostShow = () => {
     },
   });
 
+  const arrs = [{ className: 'basis-full', label: '全屏' }, { className: 'basis-1/2', label: '1/2' }, { className: 'basis-1/3', label: '1/3' }]
+
   return (
     <Show isLoading={isLoading}>
       <Title level={5}>{"ID"}</Title>
@@ -36,6 +38,10 @@ export const BlogPostShow = () => {
       <TextField value={record?.status} />
       <Title level={5}>{"CreatedAt"}</Title>
       <DateField value={record?.createdAt} />
+
+      <div className="flex flex-row flex-wrap">
+        {arrs.map(a => <div className={a.className}>{a.label}</div>)}
+      </div>
     </Show>
   );
 };
